@@ -21,7 +21,10 @@ public class StringEvaluator {
     }
 
 
-    public static String[] getCommonSubstrings(String str1, String str2) {
+    public static String[] getCommonSubstrings(String string1, String string2) {
+
+
+
 
         return null;
     }

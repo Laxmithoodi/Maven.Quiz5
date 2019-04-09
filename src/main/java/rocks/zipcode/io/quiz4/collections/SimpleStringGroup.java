@@ -25,7 +25,11 @@ public class SimpleStringGroup implements Iterable {
     }
 
     public Boolean has(String string) {
-        return null;
+        if(word.contains(string)){
+            return true;
+        }
+
+        return false;
     }
 
     public String fetch(int indexOfValue) {
@@ -34,8 +38,8 @@ public class SimpleStringGroup implements Iterable {
     }
 
     public void delete(String string) {
-        word.add(string);
-       // word.remove(string);
+
+       word.remove(string);
     }
 
     public void clear() {
@@ -44,6 +48,7 @@ public class SimpleStringGroup implements Iterable {
 
     @Override
     public Iterator iterator() {
-        return null;
+
+        return word.iterator();
     }
 }
