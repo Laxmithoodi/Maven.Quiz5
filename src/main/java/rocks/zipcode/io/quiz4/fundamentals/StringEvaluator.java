@@ -21,13 +21,17 @@ public class StringEvaluator {
     }
 
 
-    public static String[] getCommonSubstrings(String string1, String string2) {
+    public static String[] getCommonSubstrings(String str1, String str2) {
 
 
-
-
-        return null;
+        return Arrays.stream(getAllSubstrings(str2))
+                .filter(s -> isIn(s, getAllSubstrings(str1)))
+                .toArray(String[]::new);
     }
+    public static boolean isIn(String element, String[] array){
+        return Arrays.asList(array).contains(element);
+    }
+
 
     public static String getLargestCommonSubstring(String str1, String str2) {
 
@@ -59,5 +63,10 @@ public class StringEvaluator {
     }
 
         //return null;
+//     return Arrays.stream(getAllSubstrings(string2))
+//            .filter(s -> isIn(s, getAllSubstrings(string1)))
+//            .sorted((s1, s2) -> s2.length()-s1.length())
+//            .toArray(String[]::new)[0];
+//}
 
 }
